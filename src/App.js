@@ -20,7 +20,7 @@ function App() {
   );
   return (
   
-   <div className='w-450 h-450 bg-gray-300 max-w-md flex flex-col items-center justify-left py-8' >
+   <div className='w-550 h-1000 bg-violet-100 max-w-md flex flex-col items-center justify-left py-10' >
     <h1 className='text-2xl font-semibold '>Stop watch</h1>
     <div className='text-xl font-semibold py-4'>
       <span>{("0" + Math.floor((time/6000) % 60)).slice(-2)}:</span>
@@ -30,12 +30,12 @@ function App() {
     <div className='w-1/3 flex flex-row justify-evenly'>
       {
         running ? (
-        <button className="border rounded-lg py-1 px-3" onClick={ () => { setRunning(false) }}>Stop</button>
+        <button className="border bg-violet-200 rounded-lg py-1 px-3" onClick={ () => { setRunning(false) }}>Stop</button>
         ) : (
-          <button className="border rounded-lg py-1 px-3" onClick={ () => { setRunning(true) }}>Start</button>
+          <button className="border bg-violet-200 rounded-lg py-1 px-3" onClick={ () => { setRunning(true) }}>Start</button>
         )
       }
-      <button className="border rounded-lg py-1 px-3"onClick={ () => { setTime(0) }}>Reset</button>
+      <button className="border bg-violet-200 rounded-lg py-1 px-3"onClick={ () => { setTime(0) }}>Reset</button>
     </div>
     </div>
    
